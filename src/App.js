@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Allroutes from './routes/allroutes';
+import Navbar from './components/navbar';
+
 
 const App = () => {
 
   return (
     <div>
-     <Allroutes/>
+      <Navbar/>
+      <Allroutes/>
     </div>
   );
 };

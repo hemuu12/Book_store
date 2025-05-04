@@ -10,20 +10,28 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
-const theme = createTheme();
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#1976d2', // Customize your primary color
+    },
+    secondary: {
+      main: '#9c27b0',
+    },
+  },
+});
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-  
   <ThemeProvider theme={theme}>
+  <AuthProvider>
     <BrowserRouter>
-    <AuthProvider>
       <App />
-    </AuthProvider>
     <ToastContainer />
     </BrowserRouter>
+    </AuthProvider>
     </ThemeProvider>
   </React.StrictMode>
 );
